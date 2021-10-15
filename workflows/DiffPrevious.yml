@@ -11,3 +11,6 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
+
+      - name: Diff Tree Against Previous Commit
+        run: git diff-tree --no-commit-id --name-only -r ${{ github.ref }} ${{ github.ref }}~1
