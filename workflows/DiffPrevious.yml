@@ -1,0 +1,13 @@
+name: "Continuous Delivery Workflow"
+
+on:
+  push:
+    branches:
+     - "develop"
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
