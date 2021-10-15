@@ -3,7 +3,8 @@ name: "Continuous Delivery Workflow"
 on:
   push:
     branches:
-     - "develop"
+     - "master"
+    workflow_dispatch:
 
 jobs:
   build:
